@@ -1,0 +1,29 @@
+﻿@model IEnumerable<WebElReyCan.Models.Mascota>
+
+    <p id="Create">@Html.ActionLink("Create New", "Create", "Mascota")</p>
+    <table>
+        <tr>
+            <th>@Html.DisplayNameFor(model => model.Fecha)</th>
+            <th>@Html.DisplayNameFor(model => model.Hora)</th>
+            <th>@Html.DisplayNameFor(model => model.NombreMascota)</th>
+            <th>@Html.DisplayNameFor(model => model.Raza)</th>
+            <th>@Html.DisplayNameFor(model => model.Edad)</th>
+            <th>@Html.DisplayNameFor(model => model.NombreDueno)</th>
+            <th>@Html.DisplayNameFor(model => model.Celular)</th>
+        </tr>
+        <p id="Create">@Html.ActionLink("Turnos de hoy", "Turno", "Mascota")</p>
+        @foreach (var item in Model)
+        {
+    <tr>
+        <td>@Html.DisplayFor(modelItem => item.Fecha)</td>
+        <td>@Html.DisplayFor(modelItem => item.Hora)</td>
+        <td>@Html.DisplayFor(modelItem => item.NombreMascota)</td>
+        <td>@Html.DisplayFor(modelItem => item.Raza)</td>
+        <td>@Html.DisplayFor(modelItem => item.Edad)</td>
+        <td>@Html.DisplayFor(modelItem => item.NombreDueno)</td>
+        <td>@Html.DisplayFor(modelItem => item.Celular)</td>
+
+    </tr>
+        }
+    </table>
+ 
